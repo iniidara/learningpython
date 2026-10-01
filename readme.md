@@ -17,6 +17,10 @@ The files are not one application. Each script focuses on a particular idea or e
 - File creation and writing quiz data
 - Clipboard and command-line automation
 - Classes, methods, special methods, and object composition
+- Inheritance, polymorphism, and object hierarchies
+- Data visualization with `matplotlib`
+- Probability and simulation-style experiments
+- Small function-based modeling and timed calculations
 
 ## Suggested Learning Path
 
@@ -87,6 +91,16 @@ This project brings together data structures, randomness, copying, file I/O, for
 
 `circleclass.py` builds on coordinates with a `Circle` class. The circle uses a coordinate object to determine whether a point lies inside it, demonstrating composition: one object working with another object.
 
+`animalclass.py` introduces a larger inheritance hierarchy with `Animal`, `Cat`, `Person`, `Student`, and `Rabbit`. It is a useful example of subclassing, overriding methods, and storing details such as age, name, and parent references.
+
+### 10. Visualization and simulation
+
+`plotting.py` uses `matplotlib` to generate simple graphs for linear, quadratic, cubic, and exponential relationships. It is one of the first examples in the repo that moves beyond text output and shows data visually.
+
+`simulations.py` explores probability through repeated dice-roll simulations, counting how many rolls meet a threshold and estimating the outcome over many trials.
+
+`watersim.py` is a small model that calculates how long it might take to fill a container based on an average rate and a requested quantity. It reflects a general "simulation" mindset: turn a real-world scenario into a simple calculation and observe the result.
+
 ## File Guide
 
 | File | Main lesson | Current state |
@@ -110,6 +124,11 @@ This project brings together data structures, randomness, copying, file I/O, for
 | `fractionclass2.py` | Methods and object state | OOP extension |
 | `classes.py` | Coordinate objects and distance | Working OOP exercise |
 | `circleclass.py` | Composition and geometry | Working OOP exercise |
+| `animalclass.py` | Inheritance and polymorphism | Working class hierarchy demonstration |
+| `plotting.py` | Visualization with `matplotlib` | Simple plotting example |
+| `simulations.py` | Probability and repeated random trials | Simulation exercise |
+| `watersim.py` | Simple rate-based fill-time model | Small calculation model |
+| `order-tracker-oop-practice.md` | Notes and planning for OOP practice | Reference doc |
 
 ## Learning Milestones
 
@@ -124,6 +143,7 @@ The repository shows several important steps in the learning process:
 7. Writing data to files instead of keeping every result only in memory.
 8. Modeling data and behavior with classes and methods.
 9. Combining objects through composition in the coordinate and circle exercises.
+10. Moving from static scripts into graphs, probability simulations, and class hierarchies that model behavior more realistically.
 
 ## How to Run the Exercises
 
@@ -145,6 +165,12 @@ The clipboard exercises use the third-party `pyperclip` package. Install it with
 
 ```text
 python -m pip install pyperclip
+```
+
+The plotting examples use `matplotlib`:
+
+```text
+python -m pip install matplotlib
 ```
 
 `ppppd.py` and `mapIt.py` may also depend on the operating system's clipboard support. `mapIt.py` is intended to open or prepare a map address, but its browser-opening step is not finished yet.
